@@ -14,19 +14,19 @@
  *= require_self
  */
 
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
- body {
-    height: 100vh;
- }
+body {
+  height: 100vh;
+}
 
- .wrapper {
-    max-width: 50%;
-    height: 40vh;
-    margin: 3rem auto;
-    border: 2px solid red;
- }
+.wrapper {
+  max-width: 50%;
+  height: 40vh;
+  margin: 3rem auto;
+  border: 2px solid red;
+}

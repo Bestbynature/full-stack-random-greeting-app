@@ -24,16 +24,13 @@ const greetingsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchMessage.pending, (state) => {
-        state.loading = true;
+        return { ...state, loading: true };
       })
       .addCase(fetchMessage.fulfilled, (state, action) => {
-        state.loading = false;
-        // console.log(action.payload)
-        state.message = { ...action.payload };
+        return { ...state, loading: false, message: { ...action.payload } };
       })
       .addCase(fetchMessage.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
+        return { ...state, loading: false, error: action.error.message };
       });
   },
 });

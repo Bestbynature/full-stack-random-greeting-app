@@ -23,10 +23,12 @@ const greetingsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchMessage.pending, (state) =>( { ...state, loading: true }))
-      .addCase(fetchMessage.fulfilled, (state, action) => ({ ...state, loading: false, message: { ...action.payload } }
+      .addCase(fetchMessage.pending, (state) => ({ ...state, loading: true }))
+      .addCase(fetchMessage.fulfilled, (state, action) => (
+        { ...state, loading: false, message: { ...action.payload } }
       ))
-      .addCase(fetchMessage.rejected, (state, action) => ({ ...state, loading: false, error: action.error.message }
+      .addCase(fetchMessage.rejected, (state, action) => (
+        { ...state, loading: false, error: action.error.message }
       ));
   },
 });
